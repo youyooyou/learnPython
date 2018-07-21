@@ -30,5 +30,7 @@ def _test():
                 print("该数为:" + str(n * n - 168 - 100))
                 print("该数为:" + str(m * m - 100))
                 print('n为%s,m为%s' % (n, m))
+
+
 if __name__ == '__main__':
     _test()
