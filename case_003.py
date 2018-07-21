@@ -12,22 +12,23 @@
 '''
 分析：
 x + 100 = m^2
-x + 168 = n^2
-n^2 - m^2 = 68
-(n + m) * (n - m) = 68
-n > m 
+x + 100 + 168 = n^2
+n^2 - m^2 = 168
+(n + m) * (n - m) = 168
+n > m >= 0
+n - m 最小值为1
+n + m 最大为168
+n最大值为168
+m最大值为167
 '''
 
 def _test():
-    IsFound = False
-    for m in range(1,67):
-        for n in range(m, 68):
-            if (n + m) * (n - m) == 68:
-                print("该数为:" + str(n * n - 168))
+    for m in range(0, 168):
+        for n in range(m + 1, 169):
+            #print('n=%s,m=%s' % (n, m))
+            if (n + m) * (n - m) == 168:
+                print("该数为:" + str(n * n - 168 - 100))
+                print("该数为:" + str(m * m - 100))
                 print('n为%s,m为%s' % (n, m))
-                IsFound = True
-                break
-        if IsFound:
-            break
 if __name__ == '__main__':
     _test()
